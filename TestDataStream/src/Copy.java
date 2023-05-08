@@ -8,13 +8,13 @@ public class Copy {
         }
         File sourceFile = new File(args[0]);
         if (!sourceFile.exists()){
-            System.out.println("source file" + args[0] + "does not exist");
+            System.out.println("source file " + args[0] + " does not exist");
             System.exit(2);
         }
 
         File targetFile = new File(args[1]);
         if (targetFile.exists()){
-            System.out.println("target file" + args[1] + "does exist");
+            System.out.println("target file " + args[1] + " does exist");
             System.exit(3);
         }
         try (BufferedInputStream input = new BufferedInputStream(new FileInputStream(sourceFile));
@@ -24,7 +24,7 @@ public class Copy {
                 output.write((byte)r);
                 numberOfBytesCopied++;
             }
-            System.out.println(numberOfBytesCopied + "Bytes copied");
+            System.out.println(numberOfBytesCopied + " Bytes copied");
 
 
         }
