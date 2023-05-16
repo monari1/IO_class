@@ -14,6 +14,8 @@ public class TestRandomAccessFile {
             System.out.println("The second number is " + inout.readInt());
             inout.seek(9 * 4);
             System.out.println("The tenth number is " + inout.readInt());
+            inout.seek(10 * 4);
+            System.out.println("The eleventh number is " + inout.readInt());
             inout.seek(inout.length());
             inout.writeInt(999);
             System.out.println("The new length is " + inout.length());
